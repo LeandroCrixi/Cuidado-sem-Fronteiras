@@ -1,35 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --font-poppins: "Poppins", sans-serif;
+  --font-libre: "Libre Baskerville", sans-serif;
 
   --line-height-heading: 1.35;
   --line-height: 1.35;
 
   /* Font Header size */
-  --font-h0: 700 4.8rem/var(--line-height-heading) var(--main-font); /* 80px  NOT*/
-  --font-h1: 700 2.875rem/var(--line-height-heading) var(--main-font); /* 46px NOT*/
-  --font-h2: 400 2.375rem/var(--line-height) var(--main-font); /* 38px NOT*/
-  --font-h3: 700 1.875rem/var(--line-height) var(--main-font); /* 30px NOT*/
-  --font-h4: 500 1.5rem/var(--line-height) var(--main-font); /* 24px NOT */
+  --font-h0: 400 4.8rem/var(--line-height-heading) var(--font-libre); /* 80px*/
+  --font-h1: 700 2.875rem/var(--line-height-heading) var(--font-libre); /* 46px*/
+  --font-h2: 400 2.375rem/var(--line-height) var(--font-poppins); /* 38px */
+  --font-h3: 700 1.875rem/var(--line-height) var(--font-poppins); /* 30px */
+  --font-h4: 500 1.5rem/var(--line-height) var(--font-poppins); /* 24px */
 
   /* Font Body size */
-  --font-p1: 400 1.25rem/var(--line-height) var(--main-font); /* 20px NOT*/
+  --font-p1: 400 1.25rem/var(--line-height) var(--font-poppins); /* 20px */
   --font-p2: 400 1rem/var(--line-height) var(--font-poppins); /* 16px */
   --font-p2-cap: 600 1rem/var(--line-height) var(--main-font); /* 16px NOT */
   --font-p3: 600 0.875rem/var(--line-height) var(--main-font); /* 14px NOT*/
   --font-p4: 500 0.625rem/var(--line-height) var(--main-font); /* 10px NOT */
-}
-
-.up-case {
-  text-transform: uppercase;
-}
-
-h1 {
-  font: var(--font-h1);
-  color: var(--white);
-  padding: 20px 0px;
-  & span {
-    color: var(--gold);
-  }
 }

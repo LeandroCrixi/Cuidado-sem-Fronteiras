@@ -1,0 +1,129 @@
+.hero-section {
+  background: url("../../../public/img/hero.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  & div {
+    padding: 160px 100px;
+    background-color: rgba(218, 237, 227, 0.3);
+    text-align: center;
+    margin: 0 auto;
+    & h1 {
+      font: var(--font-h0);
+      font-style: italic;
+      color: var(--green2);
+    }
+    & h2 {
+      font: var(--font-h2);
+      padding-bottom: 60px;
+      width: 30ch;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .hero-section {
+    & div {
+      padding: 60px 40px;
+      & h2 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  padding: 80px 100px;
+  gap: 40px;
+  & .content {
+    padding-top: 40px;
+    & h2 {
+      font: var(--font-h1);
+      & span {
+        font-style: italic;
+        color: var(--green2);
+      }
+    }
+    & p {
+      font: var(--font-p1);
+      color: var(--gray);
+      padding: 40px 0px;
+    }
+    & ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      & li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 24ch;
+        font: var(--font-p1);
+        & img {
+          width: 26px;
+        }
+      }
+    }
+  }
+  & .img {
+    padding: 0px 40px 40px 40px;
+    & img {
+      border-radius: 40px;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .sobre {
+    grid-template-columns: 1fr;
+    & .content {
+      padding-top: 0px;
+    }
+    & .img {
+      margin: 0 auto;
+      padding: 0px;
+      & img {
+        width: 600px;
+        object-fit: cover;
+        object-position: 100% 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .sobre {
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    & .content {
+      p {
+        padding: 20px 20px 20px 0px;
+      }
+    }
+    & .img {
+      & img {
+        width: 300px;
+        object-position: 60% 20%;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px){
+  .sobre{
+    & .content{
+      & ul{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 40px;
+      }
+    }
+  }
+}
