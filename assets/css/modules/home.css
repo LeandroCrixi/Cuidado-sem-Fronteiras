@@ -36,17 +36,9 @@
 .sobre {
   display: grid;
   grid-template-columns: 1fr 0.7fr;
-  padding: 80px 100px;
   gap: 40px;
   & .content {
     padding-top: 40px;
-    & h2 {
-      font: var(--font-h1);
-      & span {
-        font-style: italic;
-        color: var(--green2);
-      }
-    }
     & p {
       font: var(--font-p1);
       color: var(--gray);
@@ -62,6 +54,11 @@
         gap: 20px;
         width: 24ch;
         font: var(--font-p1);
+        border-bottom: 2px solid transparent;
+        padding-bottom: 10px;
+        &:hover{
+          border-bottom: 2px solid var(--green);
+        }
         & img {
           width: 26px;
         }
@@ -102,6 +99,7 @@
     margin: 0 auto;
     justify-content: center;
     & .content {
+      margin-left: 20px;
       p {
         padding: 20px 20px 20px 0px;
       }
@@ -116,14 +114,75 @@
   }
 }
 
-@media (max-width: 390px){
-  .sobre{
-    & .content{
-      & ul{
-        grid-template-columns: 1fr;
-        justify-items: center;
-        gap: 40px;
+@media (max-width: 390px) {
+  .sobre {
+    & .content {
+      & ul {
+        gap: 10px;
       }
+    }
+  }
+}
+
+.services-section {
+  background: var(--green);
+  text-align: center;
+  justify-items: center;
+  & .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px 0px;
+    & .service {
+      background: var(--white);
+      padding: 40px 30px;
+      border: 2px solid var(--gray2);
+      border-radius: 20px;
+      display: flex;
+      gap: 40px;
+      &:hover {
+        border-color: var(--green2);
+      }
+      & img {
+        width: 60px;
+      }
+      & .content {
+        text-align: left;
+        & h4 {
+          font: var(--font-h4);
+          color: var(--green2);
+        }
+        & p {
+          font: var(--font-p1);
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1133px) {
+  .services-section {
+    padding: 40px;
+    & .services {
+      & .service {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 667px) {
+  .services-section {
+    & .services {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
   }
 }

@@ -1,10 +1,11 @@
 .container {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  padding: 80px 100px;
 }
 
 .btn {
@@ -12,12 +13,17 @@
   flex-wrap: wrap;
   font: var(--font-h3);
   font-weight: 400;
-  padding: 10px 80px;
+  padding: 10px 40px;
   border-radius: 100px;
   background: var(--green2);
   margin: 0 auto;
   & a {
     color: var(--white);
+    display: flex;
+    gap: 20px;
+    & img {
+      width: 40px;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -30,4 +36,12 @@
   text-transform: uppercase;
   color: var(--green2);
   padding-bottom: 20px;
+}
+
+.section-head {
+  font: var(--font-h1);
+  & span {
+    font-style: italic;
+    color: var(--green2);
+  }
 }
