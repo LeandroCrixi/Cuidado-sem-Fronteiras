@@ -213,11 +213,100 @@
   }
 }
 
-@media (max-width: 1180px){
-  .experiences-section{
-    & .experiences{
+@media (max-width: 1180px) {
+  .experiences-section {
+    & .experiences {
       flex-wrap: wrap;
       justify-content: center;
+    }
+  }
+}
+
+.faq-section {
+  background: var(--gray2);
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  gap: 40px;
+  align-items: center;
+  & .img {
+    margin: 0 auto;
+    & img {
+      border-radius: 40px;
+      height: 600px;  /* adjust the height based on how many faqs are */
+      object-fit: cover;
+    }
+  }
+  & .faq-content {
+    & .faq {
+      padding-top: 40px;
+      & dl {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & div {
+          background: var(--white);
+          border-radius: 20px;
+          padding: 20px 40px;
+          & dt {
+            & button {
+              display: grid;
+              grid-template-columns: 1fr auto;
+              gap: 24px;
+              background: var(--white);
+              width: 100%;
+              text-align: left;
+              font: var(--font-h4);
+              color: var(--green2);
+              align-items: center;
+              & img {
+                width: 20px;
+                transform: rotate(0deg);
+                transition: transform 0.5s ease;
+                &:hover {
+                  transform: rotate(-90deg);
+                }
+              }
+              &[aria-expanded="true"] img {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+          & dd {
+            display: none;
+            font: var(--font-p1);
+            padding: 10px 0px;
+            max-width: 44ch;
+            &.active {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .faq-section{
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px){
+  .faq-section{
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 440px){
+  .faq-section{
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    & .img{
+      order: 2;
+      & img{
+        height: 500px;
+      }
     }
   }
 }
