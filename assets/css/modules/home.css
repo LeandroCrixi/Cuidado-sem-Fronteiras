@@ -232,7 +232,7 @@
     margin: 0 auto;
     & img {
       border-radius: 40px;
-      height: 600px;  /* adjust the height based on how many faqs are */
+      height: 600px; /* adjust the height based on how many faqs are */
       object-fit: cover;
     }
   }
@@ -286,26 +286,123 @@
   }
 }
 
-@media (max-width: 1024px){
-  .faq-section{
+@media (max-width: 1024px) {
+  .faq-section {
     padding: 80px 40px;
   }
 }
 
-@media (max-width: 768px){
-  .faq-section{
+@media (max-width: 768px) {
+  .faq-section {
     padding: 80px 20px;
   }
 }
 
-@media (max-width: 440px){
-  .faq-section{
+@media (max-width: 440px) {
+  .faq-section {
     padding: 40px 20px;
     grid-template-columns: 1fr;
-    & .img{
+    & .img {
       order: 2;
-      & img{
+      & img {
         height: 500px;
+      }
+    }
+  }
+}
+
+.testmonials-section {
+  text-align: center;
+  & .testmonials {
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+    overflow-y: scroll;
+    & .testmonial {
+      gap: 10px;
+      padding: 40px 20px;
+      background: var(--green);
+      border-radius: 20px;
+      min-width: 400px;
+      &:nth-child(even) {
+        background: var(--gray2);
+      }
+      & div {
+        display: block;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 100px;
+        margin: 0 auto;
+        background: var(--green2);
+        & img {
+          width: 40px;
+        }
+      }
+      & p {
+        font: var(--font-p1);
+        padding: 10px 0px;
+      }
+      & h4 {
+        font: var(--font-h4);
+        color: var(--green2);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .testmonials-section {
+    & .testmonials {
+      & .testmonial {
+        min-width: 360px;
+      }
+    }
+  }
+}
+
+@media (max-width: 956px) {
+  .testmonials-section {
+    padding: 80px;
+    & .testmonials {
+      & .testmonial {
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 844px) {
+  .testmonials-section {
+    & .testmonials {
+      & .testmonial {
+        min-width: 280px;
+      }
+    }
+  }
+}
+
+@media (max-width: 744px) {
+  .testmonials-section {
+    & .testmonials {
+      & .testmonial {
+        min-width: 240px;
+      }
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .testmonials-section {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 440px) {
+  .testmonials-section {
+    & .testmonials {
+      & .testmonial {
+        min-width: 200px;
+        padding: 20px;
       }
     }
   }

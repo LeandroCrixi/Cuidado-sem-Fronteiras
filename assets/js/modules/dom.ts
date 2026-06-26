@@ -8,7 +8,7 @@ const currentYear = () => {
 };
 
 const myBackground = () => {
-  const buttons = document.querySelectorAll<HTMLButtonElement>(".my-background button");
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".faq button");
 
   const activateButton = (e: MouseEvent) => {
     const button = e.currentTarget as HTMLButtonElement;

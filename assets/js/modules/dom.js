@@ -4,21 +4,21 @@ const currentYear = () => {
   current_year.textContent = year;
 };
 
-const myBackground = () => {
-  const buttons = document.querySelectorAll(".my-background button");
+const faq = () => {
+  const btns = document.querySelectorAll(".faq button");
 
-  const activateButton = (e) => {
-    const button = e.currentTarget;
-    const controls = button.getAttribute("aria-controls");
-    const getDd = document.getElementById(controls);
-    getDd.classList.toggle("active");
-    const active = getDd.classList.contains("active");
-    button.setAttribute("aria-expanded", active);
+  const activateBtn = (e) => {
+    const btn = e.currentTarget;
+    const bControls = btn.getAttribute("aria-controls");
+    const myDD = document.getElementById(bControls);
+    myDD.classList.toggle("active");
+    const isActive = myDD.classList.contains("active");
+    btn.setAttribute("aria-expanded", isActive);
   };
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", activateButton);
+  btns.forEach((btn) => {
+    btn.addEventListener("click", activateBtn);
   });
 };
 
-export { currentYear, myBackground };
+export { currentYear, faq };
