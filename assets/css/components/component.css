@@ -30,6 +30,15 @@
   }
 }
 
+.btn2 {
+  background: var(--white);
+  margin: 0;
+  margin-top: 40px;
+  & a {
+    color: var(--green2);
+  }
+}
+
 .decor {
   display: block;
   font: var(--font-h4);
