@@ -33,7 +33,7 @@
   }
 }
 
-.sobre {
+.about {
   display: grid;
   grid-template-columns: 1fr 0.7fr;
   gap: 40px;
@@ -76,7 +76,7 @@
 }
 
 @media (max-width: 1180px) {
-  .sobre {
+  .about {
     grid-template-columns: 1fr;
     & .content {
       padding-top: 0px;
@@ -94,7 +94,7 @@
 }
 
 @media (max-width: 440px) {
-  .sobre {
+  .about {
     padding: 20px;
     margin: 0 auto;
     justify-content: center;
@@ -115,7 +115,7 @@
 }
 
 @media (max-width: 390px) {
-  .sobre {
+  .about {
     & .content {
       & ul {
         gap: 10px;
@@ -190,6 +190,10 @@
 .experiences-section {
   text-align: center;
   justify-items: center;
+  & p{
+    font: var(--font-p1);
+    padding-top: 20px;
+  }
   & .experiences {
     padding-top: 40px;
     display: flex;
@@ -208,6 +212,10 @@
       }
       & p {
         font: var(--font-p1);
+        & a:hover{
+          color: var(--green2);
+          text-decoration: underline;
+        }
       }
     }
   }
